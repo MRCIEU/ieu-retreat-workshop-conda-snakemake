@@ -22,6 +22,11 @@ This workshop is part of the 2024 IEU retreat workshops, and will be delievered 
 We assume you have had some prior experiences with the Bash shell, and to fully benefit from the workshop please follow the basic steps below. 
 Nevertheless if you are less experienced, you should also be able to learn something during the workshop.
 
+### Get the code
+
+If you have prior experiences with git, simply clone this repo.
+Otherwise you could download the repo as a zip file and unzip it locally.
+
 ### Setting up the conda environment
 
 You should first get conda from the options below, 
@@ -43,3 +48,23 @@ conda activate ieu-conda-snakemake-practice
 ```
 
 ### Running the snakemake pipeline
+
+```
+snakemake --help
+```
+
+```
+snakemake -c1 -n
+```
+
+```
+snakemake -c1 dag
+```
+
+```
+snakemake -c1
+```
+
+```
+snakemake -c1 clean
+```

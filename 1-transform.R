@@ -1,26 +1,23 @@
 library("tidyverse")
 
-# The input file path needs to be the same with
-# what is declared in the snakefile
-df = read_csv("data/WHO-COVID-19-global-data.csv")
+args = commandArgs(trailingOnly=TRUE)
 
-# The countries of interest
-COUNTRY_CODES = c("GB", "US", "FR", "DE")
+INPUT_FILE = args[1]
+COUNTRY_CODE = args[2]
+OUTPUT_FILE = args[3]
+print(
+  glue::glue("INPUT_FILE {INPUT_FILE}\nCOUNTRY_CODE {COUNTRY_CODE} OUTPUT_FILE {OUTPUT_FILE}")
+)
 
-# Processing steps:
-# - subset to a few countries
-# - rename to simpler column names
-# - bind this processed frame to a variable clean_df
+df = read_csv(INPUT_FILE)
+
 df %>%
-  filter(Country_code %in% COUNTRY_CODES) %>%
+  filter(Country_code %in% COUNTRY_CODE) %>%
   select(date=Date_reported,
          country=Country,
          cases=New_cases, deaths=New_deaths) ->
   clean_df
 
-# Check the structure of the dataframe
 clean_df %>% glimpse()
 
-# The output file path needs to be the same with
-# what is declared in the snakefile
-clean_df %>% write_csv("intermediates/plot_df.csv")
+clean_df %>% write_csv(OUTPUT_FILE)
