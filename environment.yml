@@ -1,0 +1,11 @@
+name: ieu-conda-snakemake-practice
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  - python
+  - bioconda::snakemake
+  - r
+  - r-tidyverse
+  - graphviz
