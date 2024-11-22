@@ -17,25 +17,14 @@ There are a variety of tools to make your pipeline reproducible, and in this wor
 
 This workshop is part of the 2024 IEU retreat workshops, and will be delievered by Zhaozhen Xu and Yi Liu.
 
-## Pre-course steps
+## Basic steps
+
+Below are the basic steps to use the code
 
 We assume you have had some prior experiences with the Bash shell, and to fully benefit from the workshop please follow the basic steps below. 
 Nevertheless if you are less experienced, you should also be able to learn something during the workshop.
 
-### Get the code
-
-If you have prior experiences with git, simply clone this repo.
-Otherwise you could download the repo as a zip file and unzip it locally.
-
-### Setting up the conda environment
-
-You should first get conda from the options below, 
-and install conda following the instruction from the respective options
-
-- the miniconda distribution https://docs.anaconda.com/miniconda/install/
-- the anaconda distribution https://www.anaconda.com/download
-
-After conda is installed and **callable** from the command line, create the conda environment at the **project root** by
+### Conda
 
 ```
 conda env create -f environment.yml
