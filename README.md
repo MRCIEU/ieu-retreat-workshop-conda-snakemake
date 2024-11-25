@@ -17,6 +17,8 @@ There are a variety of tools to make your pipeline reproducible, and in this wor
 
 This workshop is part of the 2024 IEU retreat workshops, and will be delievered by Zhaozhen Xu and Yi Liu.
 
+**The workshop materials can be found at the [wiki](https://github.com/MRCIEU/ieu-retreat-workshop-conda-snakemake/wiki) of this repo.**
+
 ## Basic steps
 
 Below are the basic steps to use the code
